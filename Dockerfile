@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 COPY ./main .
 RUN go build code-education-rocks.go
 
-FROM golang:1.18-alpine
+FROM scratch
 
 WORKDIR /usr/src/app
 COPY --from=builder ./usr/src/app/code-education-rocks .
